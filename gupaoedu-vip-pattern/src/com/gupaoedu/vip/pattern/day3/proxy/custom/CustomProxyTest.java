@@ -13,10 +13,8 @@ public class CustomProxyTest {
         public static void main(String[] args) throws Exception {
 
             Person obj = (Person)new CustomMeipo().getInstance(new Xiemu());
+            System.out.println(obj);
             obj.findLove();
-            obj.findJob();
-
-
-
+//            obj.findJob();
         }
 }

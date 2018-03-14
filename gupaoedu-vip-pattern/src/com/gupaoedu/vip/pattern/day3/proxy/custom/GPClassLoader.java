@@ -13,11 +13,14 @@ public class GPClassLoader extends  ClassLoader{
 
     public GPClassLoader(){
         String classPath =  GPClassLoader.class.getResource("").getPath();
+        System.out.println(classPath);
+        System.out.println(GPClassLoader.class.getResource("") +"2");
         this.classPathFile = new File(classPath);
     }
     @Override
    protected Class<?> findClass(String name){
        String className = GPClassLoader.class.getPackage().getName() + "." + name;
+        System.out.println(className);
        if (classPathFile != null){
             File classFile = new File(classPathFile,name.replaceAll("\\.","/") + ".class");
            if(classFile.exists()){

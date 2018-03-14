@@ -14,6 +14,7 @@ public class JDKProxyTest {
     public static void main(String[] args) throws Exception {
 
         Person obj = (Person)new JDKMeipo().getInstance(new Xiemu());
+        System.out.println(obj);
         obj.findLove();
 //        obj.findJob();
 
